@@ -1,0 +1,167 @@
+"========================================
+" Sections:
+"       -> General Settings
+"       -> Display Settings
+"       -> HotKey Settings
+"       -> Others
+"==========================================
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Settings
+
+" Enable mouse
+set mouse=a
+
+" Encode
+set encoding=utf-8
+
+" Leader
+let mapleader = ';'
+
+" Delete eol, auto-indent
+set backspace=indent,eol,start
+
+" No compatible with old vi
+set nocompatible
+
+" Sets how many lines of history VIM has to remember
+set history=2000
+
+" filetype
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Display Settings
+
+" Set 10 off lines to the cursor - when moving vertically using j/k
+set scrolloff=10
+
+" Do not warp
+set nowrap
+
+" show
+set ruler                       " show the current row and column
+set number                      " show line numbers
+set nowrap
+set showcmd                     " display incomplete commands
+set showmode                    " display current modes
+set showmatch                   " jump to matches when entering parentheses
+set matchtime=2                 " tenths of a second to show the matching parenthesis
+
+" show location
+set cursorline
+
+""""" STATUS LINE """""
+" Always show status
+set laststatus=2
+" status line style
+" < truncate if space is not enough
+" f relative file path to CWD
+" m if modified
+" r if readonly
+" h help buffer flag
+" = align rest to right
+" y filetype
+" l line number
+" L total line
+" c column number
+" p position
+set statusline=%<%f%r%m%h\ \ CWD:\ %{getcwd()}\ \ filetype:\ %y\ %=[line:%l/%L,\ col:%c]\ %p%%\ -----
+"""""""""""""""""""""""""
+
+" Invisible characters style
+set list listchars=tab:>-,eol:░
+set nolist
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Hotkey Settings
+
+" Toggle line number =========================================================================> <F1>
+noremap <F1> :set nu!<CR>
+noremap! <F1> <Esc>:set nu!<CR>li
+
+" Toggle line wrap ===========================================================================> <F2>
+noremap <F2> :set wrap!<CR>
+noremap! <F2> <Esc>:set wrap!<CR>li
+
+" Toggle show invisible characters  ==========================================================> <F3>
+noremap <F3> :set list!<CR>
+noremap! <F3> <Esc>:set list!<CR>li
+
+" Toggle replace between tab and 4 space  ====================================================> <F4>
+noremap <F4> :set expandtab!<CR>:% retab!<CR>
+noremap! <F4> <Esc>:set expandtab!<CR>:% retab!<CR>li
+
+" Toggle hightlight current column  =================================================================> <F5>
+noremap <F5> :set cursorcolumn!<CR>
+noremap! <F5> <Esc>:set cursorcolumn!<CR>li
+
+set pastetoggle=<F6>
+
+
+" continue shift
+vnoremap > >gv
+vnoremap < <gv
+
+" s for save
+nnoremap s :w<CR>
+
+" U to redo
+noremap <S-u> <C-R>
+
+" Swap implementations of ` and ' jump to markers
+" By default, ' jumps to the marked line, ` jumps to the marked line and
+" column, so swap them
+nnoremap ' `
+nnoremap ` '
+
+" J,K to back to scroll down/up current line
+noremap <S-j> 10j
+noremap <S-k> 10k
+
+" H,L to home end
+noremap <S-h> <Home>
+noremap <S-l> <End>
+
+" w, e for word move
+noremap <S-w> b
+noremap <S-e> ge
+
+" Z to exit
+noremap <S-z> <S-z><S-z>
+
+" space to select current word
+nnoremap <Space> viw
+
+inoremap jk <esc>
+vnoremap jkjk <esc>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Others
+
+" search
+set hlsearch                    " highlight searches
+set incsearch                   " do incremental searching, search as you type
+set ignorecase                  " ignore case when searching
+set smartcase                   " no ignorecase if Uppercase char present
+" remove search hight
+noremap // :let @/ = ""<CR>
+
+" tab
+set expandtab                   " expand tabs to spaces
+set smarttab
+set shiftround
+
+" indent
+set autoindent smartindent shiftround
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4                " insert mode tab and backspace use 4 spaces
+
+" complete
+set wildmenu                           " show a navigable menu for tab completion"
