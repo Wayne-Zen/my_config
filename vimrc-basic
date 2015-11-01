@@ -143,6 +143,8 @@ vnoremap jkjk <esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Others
+" format
+autocmd BufNewFile,BufRead * setlocal formatoptions=""
 
 " search
 set hlsearch                    " highlight searches
@@ -164,4 +166,7 @@ set tabstop=4
 set softtabstop=4                " insert mode tab and backspace use 4 spaces
 
 " complete
+set completeopt=longest,menuone
 set wildmenu                           " show a navigable menu for tab completion"
+set wildmode=longest,list,full
+
