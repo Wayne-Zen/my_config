@@ -119,6 +119,13 @@ endfunction
 vnoremap > >gv
 vnoremap < <gv
 
+" Move cursor by display lines when wrapping
+nnoremap k gk
+nnoremap gk k
+nnoremap j gj
+nnoremap gj j
+
+
 " s for save
 nnoremap s :w<CR>
 
