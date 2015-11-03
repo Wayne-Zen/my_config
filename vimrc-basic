@@ -80,28 +80,40 @@ set nolist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey Settings
 
-" Toggle line number =========================================================================> <F1>
+" <F1> :Toggle line number 
 noremap <F1> :set nu!<CR>
 noremap! <F1> <Esc>:set nu!<CR>li
 
-" Toggle line wrap ===========================================================================> <F2>
+" <F2> :Toggle line wrap
 noremap <F2> :set wrap!<CR>
 noremap! <F2> <Esc>:set wrap!<CR>li
 
-" Toggle show invisible characters  ==========================================================> <F3>
+" <F3> :Toggle show invisible characters
 noremap <F3> :set list!<CR>
 noremap! <F3> <Esc>:set list!<CR>li
 
-" Toggle replace between tab and 4 space  ====================================================> <F4>
+" <F4> :Toggle replace between tab and 4 space 
 noremap <F4> :set expandtab!<CR>:% retab!<CR>
 noremap! <F4> <Esc>:set expandtab!<CR>:% retab!<CR>li
 
-" Toggle hightlight current column  =================================================================> <F5>
+" <F5> :Toggle hightlight current column
 noremap <F5> :set cursorcolumn!<CR>
 noremap! <F5> <Esc>:set cursorcolumn!<CR>li
 
+" <F6> :Toggle pastemode
 set pastetoggle=<F6>
 
+" <F7> :Toggle mouse
+nnoremap <F7> :call ToggleMouse()<CR>
+function! ToggleMouse()
+	if &mouse == 'a'
+		set mouse=
+		echo "Mouse usage disabled"
+	else
+		set mouse=a
+		echo "Mouse usage enabled"
+	endif
+endfunction
 
 " continue shift
 vnoremap > >gv
@@ -137,9 +149,12 @@ noremap <S-z> <S-z><S-z>
 " space to select current word
 nnoremap <Space> viw
 
+" quick esc
 inoremap jk <esc>
-vnoremap jkjk <esc>
+vnoremap kj <esc>
 
+" remove search hight
+noremap // :let @/ = ""<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Others
@@ -151,8 +166,6 @@ set hlsearch                    " highlight searches
 set incsearch                   " do incremental searching, search as you type
 set ignorecase                  " ignore case when searching
 set smartcase                   " no ignorecase if Uppercase char present
-" remove search hight
-noremap // :let @/ = ""<CR>
 
 " tab
 set expandtab                   " expand tabs to spaces
@@ -169,4 +182,9 @@ set softtabstop=4                " insert mode tab and backspace use 4 spaces
 set completeopt=longest,menuone
 set wildmenu                           " show a navigable menu for tab completion"
 set wildmode=longest,list,full
+
+" remember last postion when reopen
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
