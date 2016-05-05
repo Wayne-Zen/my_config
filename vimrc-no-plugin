@@ -1,3 +1,9 @@
+" Plug
+" install bundles
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
 "========================================
 " Sections:
 "       -> General Settings
