@@ -84,6 +84,9 @@ set statusline=%<%f%r%m%h\ \ CWD:\ %{getcwd()}\ \ filetype:\ %y\ %=[line:%l/%L,\
 set list listchars=tab:>-,eol:░
 set nolist
 
+" Avoid 'Press ENTER or type command to continue'
+set shortmess=a
+set cmdheight=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey Settings
