@@ -88,7 +88,7 @@ set nolist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Hotkey Settings
 
-" <F1> :Toggle line number 
+" <F1> :Toggle line number
 noremap <F1> :set nu!<CR>
 noremap! <F1> <Esc>:set nu!<CR>li
 
@@ -100,7 +100,7 @@ noremap! <F2> <Esc>:set wrap!<CR>li
 noremap <F3> :set list!<CR>
 noremap! <F3> <Esc>:set list!<CR>li
 
-" <F4> :Toggle replace between tab and 4 space 
+" <F4> :Toggle replace between tab and 4 space
 noremap <F4> :set expandtab!<CR>:% retab!<CR>
 noremap! <F4> <Esc>:set expandtab!<CR>:% retab!<CR>li
 
@@ -114,13 +114,13 @@ set pastetoggle=<F6>
 " <F7> :Toggle mouse
 nnoremap <F7> :call ToggleMouse()<CR>
 function! ToggleMouse()
-	if &mouse == 'a'
-		set mouse=
-		echo "Mouse usage disabled"
-	else
-		set mouse=a
-		echo "Mouse usage enabled"
-	endif
+    if &mouse == 'a'
+        set mouse=
+        echo "Mouse usage disabled"
+    else
+        set mouse=a
+        echo "Mouse usage enabled"
+    endif
 endfunction
 
 "<F8> Remove all trailing whitespace
@@ -205,6 +205,3 @@ set wildmode=longest,list,full
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
-
-
