@@ -1,3 +1,5 @@
+" curl https://raw.githubusercontent.com/Wayne-Zen/my_config/master/vimrc-no-plugin > ~/.vimrc
+
 " Plug
 " install bundles
 if filereadable(expand("~/.vimrc.bundles"))
@@ -120,6 +122,9 @@ function! ToggleMouse()
 		echo "Mouse usage enabled"
 	endif
 endfunction
+
+"<F8> Remove all trailing whitespace
+nnoremap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>:w<CR>
 
 " continue shift
 vnoremap > >gv
