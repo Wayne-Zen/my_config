@@ -1,5 +1,8 @@
+
+
 # Set new prefix
 set -g prefix C-j
+bind-key -n C-k send-prefix
 unbind C-b
 
 # Reload
