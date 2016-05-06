@@ -1,9 +1,9 @@
-
-
 # Set new prefix
 set -g prefix C-j
-bind-key -n C-k send-prefix
 unbind C-b
+# send prefix to remote tmux
+bind-key -n C-k send-prefix
+
 
 # Reload
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
