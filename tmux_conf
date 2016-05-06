@@ -1,3 +1,5 @@
+# curl https://raw.githubusercontent.com/Wayne-Zen/my_config/master/tmux_conf > ~/.tmux.conf
+
 # Set new prefix
 set -g prefix C-j
 unbind C-b
