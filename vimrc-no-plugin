@@ -1,4 +1,5 @@
 " curl https://raw.githubusercontent.com/Wayne-Zen/my_config/master/vimrc-no-plugin > ~/.vimrc
+" wget https://raw.githubusercontent.com/Wayne-Zen/my_config/master/vimrc-no-plugin -O ~/.vimrc
 
 " Plug
 " install bundles
