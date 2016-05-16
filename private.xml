@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Head and Tail</name>
+        <identifier>private.head_tail</identifier>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::COMMA,  		ModifierFlag::COMMAND_R,
+            KeyCode::CURSOR_LEFT, 	ModifierFlag::COMMAND_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::DOT,   		ModifierFlag::COMMAND_R,
+            KeyCode::CURSOR_RIGHT, 	ModifierFlag::COMMAND_L
+        </autogen>
+    </item>
+    <item>
+        <name>Word Move</name>
+        <identifier>private.word_move</identifier>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::N,     ModifierFlag::COMMAND_R,
+            KeyCode::CURSOR_LEFT,     ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::M,     ModifierFlag::COMMAND_R,
+            KeyCode::CURSOR_RIGHT,     ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+</root>
