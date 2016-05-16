@@ -106,7 +106,13 @@ alias tmuxrc="vi ~/.tmux.conf"
 
 
 #### App
-## pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+## virtualenv
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+# pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+## virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
 ## fasd
 eval "$(fasd --init auto)"
