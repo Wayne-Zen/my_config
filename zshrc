@@ -1,3 +1,6 @@
+# curl https://raw.githubusercontent.com/Wayne-Zen/my_config/master/zshrc > ~/.zshrc
+# wget https://raw.githubusercontent.com/Wayne-Zen/my_config/master/zshrc -O ~/.zshrc
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
