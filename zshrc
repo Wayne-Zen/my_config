@@ -105,8 +105,6 @@ alias tmuxrc="vi ~/.tmux.conf"
 #### App
 ## pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-## pyenv-virtualenv
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ## fasd
