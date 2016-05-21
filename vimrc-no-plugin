@@ -18,6 +18,9 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General Settings
 
+" make backspace work like most other apps
+set backspace=2 
+
 " Enable mouse
 set mouse=a
 
