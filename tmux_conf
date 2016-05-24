@@ -10,6 +10,8 @@ unbind C-b
 # send prefix to remote tmux
 bind-key -n C-k send-prefix
 
+# use zsh
+set-option -g default-shell /bin/zsh
 
 # Reload
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
