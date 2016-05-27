@@ -1,1 +1,14 @@
-#
+# Insert your preferred key mappings here.
+unmapAll
+map J scrollToBottom
+map K scrollToTop
+map H goBack
+map L goForward
+map v enterVisualMode
+map b Vomnibar.activateBookmarksInNewTab
+map p togglePinTab
+map i focusInput
+map f LinkHints.activateModeToOpenInNewForegroundTab
+
+map ? showHelp
+map / enterFindMode
