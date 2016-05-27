@@ -8,7 +8,9 @@ map v enterVisualMode
 map b Vomnibar.activateBookmarksInNewTab
 map p togglePinTab
 map i focusInput
-map f LinkHints.activateModeToOpenInNewForegroundTab
-
+map f LinkHints.activateMode
+map F LinkHints.activateModeToOpenInNewForegroundTab
+map , goPrevious
+map . goNext
 map ? showHelp
 map / enterFindMode
