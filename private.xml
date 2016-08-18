@@ -1,22 +1,24 @@
 <?xml version="1.0"?>
 <root>
-    <item>
-        <name>Head and Tail</name>
-        <identifier>private.head_tail</identifier>
-        <autogen>
-            __KeyToKey__ 
-            KeyCode::COMMA,  		ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_LEFT, 	ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>
-            __KeyToKey__ 
-            KeyCode::DOT,   		ModifierFlag::COMMAND_R,
-            KeyCode::CURSOR_RIGHT, 	ModifierFlag::COMMAND_L
-        </autogen>
-    </item>
+	<appdef>
+	    <appname>QQBROWSER</appname>
+	    <equal>com.tencent.QQBrowser</equal>
+  	</appdef>
+
     <item>
         <name>Word Move</name>
         <identifier>private.word_move</identifier>
+        <not>TERMINAL</not>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::COMMA,         ModifierFlag::COMMAND_R,
+            KeyCode::CURSOR_LEFT,   ModifierFlag::COMMAND_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::DOT,           ModifierFlag::COMMAND_R,
+            KeyCode::CURSOR_RIGHT,  ModifierFlag::COMMAND_L
+        </autogen>
         <autogen>
             __KeyToKey__ 
             KeyCode::N,     ModifierFlag::COMMAND_R,
@@ -27,5 +29,85 @@
             KeyCode::M,     ModifierFlag::COMMAND_R,
             KeyCode::CURSOR_RIGHT,     ModifierFlag::OPTION_L
         </autogen>
+    </item>
+    <item>
+    	<name>Tab visit</name>
+    	<identifier>private.tab_visit</identifier>
+    	<only>QQBROWSER, FINDER</only>
+    	<autogen>
+            __KeyToKey__ 
+            KeyCode::Y,   	ModifierFlag::COMMAND_R | ModifierFlag::NONE,
+            KeyCode::TAB, 	ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::U,   	ModifierFlag::COMMAND_R,
+            KeyCode::TAB, 	ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+    	<name>Tab visit reverse</name>
+    	<identifier>private.tab_visit_reverse</identifier>
+    	<only>TERMINAL, SUBLIMETEXT, Atom</only>
+    	<autogen>
+            __KeyToKey__ 
+            KeyCode::U,   	ModifierFlag::COMMAND_R | ModifierFlag::NONE,
+            KeyCode::TAB, 	ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::Y,   	ModifierFlag::COMMAND_R,
+            KeyCode::TAB, 	ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+        <name>Terminal word operation</name>
+        <identifier>private.terminal_word_operation</identifier>
+        <only>TERMINAL</only>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::COMMA,         ModifierFlag::COMMAND_R,
+            KeyCode::A,             ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::DOT,           ModifierFlag::COMMAND_R,
+            KeyCode::E,             ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::N,             ModifierFlag::COMMAND_R,
+            KeyCode::B,             ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::M,             ModifierFlag::COMMAND_R,
+            KeyCode::F,             ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::BACKSLASH,     ModifierFlag::COMMAND_R,
+            KeyCode::U,             ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::BACKSLASH,     ModifierFlag::SHIFT_L,
+            KeyCode::W,             ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+    <item>
+        <name>Word delete</name>
+        <identifier>private.word_delete</identifier>
+        <autogen>
+            __KeyToKey__ 
+            KeyCode::BACKSLASH,     ModifierFlag::SHIFT_L,
+            KeyCode::DELETE,        ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+    <item>
+        <name>Swap backslash and delete</name>
+        <identifier>private.swap_backslash_delete</identifier>
+        <autogen>__KeyToKey__ KeyCode::BACKSLASH, KeyCode::DELETE</autogen>
+        <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::BACKSLASH</autogen>
     </item>
 </root>
